@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trattoria Lume · Restaurante italiano</title>
+<meta name="description" content="Site de demonstração de um restaurante italiano fictício: massas frescas, cardápio e reservas.">
+<link rel="stylesheet" href="estilo.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Trattoria Lume","servesCuisine":"Italiana"}</script>
+</head>
+<body>
+<header class="capa">
+  <nav><strong>Trattoria Lume</strong><a href="#cardapio">Cardápio</a><a href="#reserva">Reservar</a></nav>
+  <h1>A Itália, <em>sem pressa.</em></h1>
+  <p>Massas frescas feitas todas as manhãs. Restaurante fictício, criado para demonstração.</p>
+  <a class="botao" href="#reserva">Reservar mesa</a>
+</header>
+<main>
+  <section id="cardapio">
+    <h2>Cardápio</h2>
+    <div class="pratos">
+      <article><h3>Tagliatelle al ragù</h3><p>Ragù cozido por seis horas.</p><b>R$ 68</b></article>
+      <article><h3>Risotto de limão-siciliano</h3><p>Com camarões na manteiga.</p><b>R$ 82</b></article>
+      <article><h3>Tiramisù da casa</h3><p>Receita clássica, feita no dia.</p><b>R$ 32</b></article>
+    </div>
+  </section>
+  <section id="reserva">
+    <h2>Reserve sua mesa</h2>
+    <form id="form">
+      <label>Nome <input name="nome" required></label>
+      <label>Data <input name="data" type="date" required></label>
+      <label>Pessoas <input name="pessoas" type="number" min="1" max="12" value="2" required></label>
+      <button class="botao">Enviar pedido</button>
+      <p id="ok" role="status"></p>
+    </form>
+  </section>
+</main>
+<footer>Projeto de demonstração. Nenhum pedido é enviado.</footer>
+<script>
+  document.getElementById("form").onsubmit = (e) => {
+    e.preventDefault();
+    const d = new FormData(e.target);
+    document.getElementById("ok").textContent = `Obrigado, ${d.get("nome")}! Pedido simulado para ${d.get("pessoas")} pessoas.`;
+  };
+</script>
+</body>
+</html>
