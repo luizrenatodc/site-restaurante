@@ -6,6 +6,20 @@ Site institucional de um restaurante italiano fictício, com cardápio, reserva 
 
 **Demonstração:** https://luizrenatodc.github.io/site-restaurante/
 
+## Veja funcionando
+
+![Capa do site.](docs/capa.png)
+
+*Capa do site.*
+
+![Cardápio e formulário de reserva.](docs/cardapio.png)
+
+*Cardápio e formulário de reserva.*
+
+![Versão para celular.](docs/celular.png)
+
+*Versão para celular.*
+
 ## Objetivo
 
 Um restaurante precisa que o site passe a mesma sensação do salão, mostre o cardápio sem PDF e leve a pessoa até a reserva. A página foi pensada para responder a essas três necessidades com o mínimo de peso.
